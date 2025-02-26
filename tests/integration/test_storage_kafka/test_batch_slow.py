@@ -177,7 +177,7 @@ def test_kafka_unavailable(kafka_cluster, create_query_generator, do_direct_read
                 CREATE MATERIALIZED VIEW test.destination_unavailable ENGINE=MergeTree ORDER BY tuple() AS
                 SELECT
                     key,
-                    now() as consume_ts,,
+                    now() as consume_ts,
                     value,
                     _topic,
                     _key,
